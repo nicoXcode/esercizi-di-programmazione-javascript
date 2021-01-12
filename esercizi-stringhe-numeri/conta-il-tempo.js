@@ -12,3 +12,20 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const minXHours = 60;
+const secXMinutes = 60;
+const secXHours = 3600;
+var inputSec = 12560;
+var hours = Math.round(inputSec/secXHours);
+console.log(hours);
+/* con questi 2 passaggi calcoliamo i secondi restanti partendo dall'input e sottraendo le ore convertite
+in secondi */
+var secDiff = (inputSec-(hours*secXHours));
+/* con questi 2 passaggi invece andiamo a calcolare i minuti restanti partendo dalla diff calcolata prima*/
+var minutes = Math.round(secDiff/secXMinutes);
+console.log(minutes);
+/* ora invece non ci resta che convertire i minuti in secondi ed effettuare la differenza finale
+per estrapolare i secondi mancanti */
+var seconds = (inputSec - (hours*secXHours)-(minutes*secXMinutes));
+console.log(seconds);

@@ -11,3 +11,13 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const currentYear = 2020;
+var birthday = 1987;
+const undred = 100;
+
+var age = currentYear - birthday;
+var yearsToUndred = undred - age;
+
+console.log(age);
+console.log(yearsToUndred);

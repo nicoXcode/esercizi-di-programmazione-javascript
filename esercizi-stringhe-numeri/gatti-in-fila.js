@@ -17,3 +17,29 @@
 
   http://www.imparareaprogrammare.it
 */
+
+//Dichiarazione variabili
+
+    var totCats = 44;
+    var catsXRows = 6;
+    var numOfRows = 0;
+    var missingCats;
+    var i;
+
+  // Questa è una soluzione più articolata che mostra anche l'utilizzo del ciclo for
+  /*
+    for (i = 0; totCats >= catsXRows; i++)
+    {
+      totCats = totCats-catsXRows;
+      numOfRows++;
+      missingCats = catsXRows-totCats;
+    }
+  */
+
+  //Soluzione più snella che utilizza la matematica e la funzione Math.ceil
+
+  numOfRows = Math.ceil(totCats/catsXRows);
+  missingCats = totCats-(numOfRows*catsXRows);
+
+  console.log("The num of rows are: " + numOfRows);
+  console.log("The missing cats are: " + missingCats);
